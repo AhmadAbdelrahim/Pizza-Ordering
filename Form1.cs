@@ -22,5 +22,10 @@ namespace Pizza_Ordering
             Form frm2 = new Form2();
             frm2.ShowDialog();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
