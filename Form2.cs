@@ -88,15 +88,20 @@ namespace Pizza_Ordering
         }
 
         private void ckBox2_CheckedChanged(object sender, EventArgs e)
-        {
-            if (ckBox2.Checked)
+        {            
+            if (ckBox1.Checked)
             {
-                label7.Text = "Olives";
+                label7.Text = "Onion";
             }
-            else if (ckBox1.Checked && ckBox2.Checked)
+            if (ckBox1.Checked && ckBox2.Checked)
             {
                 label7.Text = "Onion, Olives";
             }
+            else if (ckBox2.Checked)
+            {
+                label7.Text = "Olives";
+            }
+                
             else
             {
                 label7.Text = "No Toppings";
@@ -104,14 +109,14 @@ namespace Pizza_Ordering
         }
 
         private void ckBox3_CheckedChanged(object sender, EventArgs e)
-        {
-            if (ckBox3.Checked)
-            {
-                label7.Text = "Tomatoes";
-            }
-            else if(ckBox1.Checked && ckBox2.Checked && ckBox3.Checked)
+        {            
+            if(ckBox1.Checked && ckBox2.Checked && ckBox3.Checked)
             {
                 label7.Text = "Onion, Olives, Tomatoes";
+            }
+            else if (ckBox3.Checked)
+            {
+                label7.Text = "Tomatoes";
             }
             else
             {
@@ -120,14 +125,14 @@ namespace Pizza_Ordering
         }
 
         private void ckBox4_CheckedChanged(object sender, EventArgs e)
-        {
-            if (ckBox4.Checked)
-            {
-                label7.Text = "Mushrooms";
-            }
-            else if (ckBox1.Checked && ckBox2.Checked && ckBox3.Checked && ckBox4.Checked)
+        {            
+            if (ckBox1.Checked && ckBox2.Checked && ckBox3.Checked && ckBox4.Checked)
             {
                 label7.Text = "Onion, Olives, Tomatoes, Mushrooms";
+            }
+            else if (ckBox4.Checked)
+            {
+                label7.Text = "Mushrooms";
             }
             else
             {
@@ -136,14 +141,22 @@ namespace Pizza_Ordering
         }
 
         private void ckBox5_CheckedChanged(object sender, EventArgs e)
-        {
-            if (ckBox5.Checked)
-            {
-                label7.Text = "Extra Chees";
-            }
-            else if (ckBox1.Checked && ckBox2.Checked && ckBox3.Checked && ckBox4.Checked && ckBox5.Checked)
+        {           
+            if (ckBox1.Checked && ckBox2.Checked && ckBox3.Checked && ckBox4.Checked && ckBox5.Checked)
             {
                 label7.Text = "Onion, Olives, Tomatoes, Mushrooms, Extra Chees";
+            }
+            if (ckBox1.Checked && ckBox2.Checked && ckBox3.Checked && ckBox4.Checked && ckBox5.Checked)
+            {
+                label7.Text = "Onion, Olives, Tomatoes, Mushrooms, Extra Chees, Green Peppers";
+            }
+            else if (ckBox1.Checked && ckBox2.Checked && ckBox3.Checked && ckBox4.Checked && ckBox6.Checked)
+            {
+                label7.Text = "Onion, Olives, Tomatoes, Mushrooms, Green Peppers";
+            }
+            else if (ckBox5.Checked)
+            {
+                label7.Text = "Extra Chees";
             }
             else
             {
@@ -153,13 +166,17 @@ namespace Pizza_Ordering
 
         private void ckBox6_CheckedChanged(object sender, EventArgs e)
         {
-            if (ckBox6.Checked)
-            {
-                label7.Text = "Green Peppers";
-            }
-            else if (ckBox1.Checked && ckBox2.Checked && ckBox3.Checked && ckBox4.Checked && ckBox5.Checked && ckBox6.Checked)
+            if (ckBox1.Checked && ckBox2.Checked && ckBox3.Checked && ckBox4.Checked && ckBox5.Checked && ckBox6.Checked)
             {                
                 label7.Text = "Onion, Olives, Tomatoes, Mushrooms, Extra Chees, Green Peppers";                
+            }
+            else if (ckBox1.Checked && ckBox2.Checked && ckBox3.Checked && ckBox4.Checked && ckBox5.Checked)
+            {
+                label7.Text = "Onion, Olives, Tomatoes, Mushrooms, Extra Chees";
+            }
+            else if (ckBox6.Checked)
+            {
+                label7.Text = "Green Peppers";
             }
             else
             {
