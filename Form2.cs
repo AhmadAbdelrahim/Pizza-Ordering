@@ -16,79 +16,86 @@ namespace Pizza_Ordering
         {
             InitializeComponent();
         }
-
-        private void button1_Click(object sender, EventArgs e)
+        private void btnOrderPizza_Click(object sender, EventArgs e)
         {
-            if(MessageBox.Show("Confirm Order", "Confirm", MessageBoxButtons.OKCancel,MessageBoxIcon.Question) == DialogResult.OK)
+            if (MessageBox.Show("Confirm Order", "Confirm", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
             {
-                {
-                    MessageBox.Show("Order Placed Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                    button1.Enabled = false;
-                    gpBox1.Enabled = false;
-                    gpBox2.Enabled = false;
-                    gpBox3.Enabled = false;
-                    gpBox4.Enabled = false;
-                }
-            }            
+                MessageBox.Show("Order Placed Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                btnOrderPizza.Enabled = false;
+                gbSize.Enabled = false;
+                gbCrustType.Enabled = false;
+                gbToppings.Enabled = false;
+                gbWhereToEat.Enabled = false;
+            }
         }
-
         private void button2_Click(object sender, EventArgs e)
         {
-            gpBox1.Enabled = true;
-            gpBox2.Enabled = true;
-            gpBox3.Enabled = true;
-            gpBox4.Enabled = true;
+            gbSize.Enabled = true;
+            gbCrustType.Enabled = true;
+            gbToppings.Enabled = true;
+            gbWhereToEat.Enabled = true;
         }
 
-        private void rdBtn1_CheckedChanged(object sender, EventArgs e)
+        void UpdateSize()
         {
-            lblSize.Text = "Small";
+            if(rbSmall.Checked)
+            {
+                lblSize.Text = "Small";
+                return;
+            }
+            if(rbMedium.Checked)
+            {
+                lblSize.Text = "Medium";
+                return;
+            }
+            if (rbLarge.Checked)
+            {
+                lblSize.Text = "Large";
+                return;
+            }
         }
 
-        private void rdBtn2_CheckedChanged(object sender, EventArgs e)
+        private void rbSmall_CheckedChanged(object sender, EventArgs e)
         {
-            lblSize.Text = "Medium";
+            UpdateSize();
         }
-
-        private void rdBtn3_CheckedChanged(object sender, EventArgs e)
+        private void rbMedium_CheckedChanged(object sender, EventArgs e)
         {
-            lblSize.Text = "Large";
+            UpdateSize();
         }
-
-        private void rdBtn4_CheckedChanged(object sender, EventArgs e)
+        private void rbLarge_CheckedChanged(object sender, EventArgs e)
+        {
+            UpdateSize();
+        }
+        private void rbThinCrust_CheckedChanged(object sender, EventArgs e)
         {
             lblCrustType.Text = "Thin Crust";
         }
-
-        private void rdBtn5_CheckedChanged(object sender, EventArgs e)
+        private void rbThinkCrust_CheckedChanged(object sender, EventArgs e)
         {
             lblCrustType.Text = "Think Crust";
         }
-
-        private void rdBtn6_CheckedChanged(object sender, EventArgs e)
+        private void rbEatIn_CheckedChanged(object sender, EventArgs e)
         {
             lblWhereToEat.Text = "Eat In";
         }
-
-        private void rdBtn7_CheckedChanged(object sender, EventArgs e)
+        private void rbTakeOut_CheckedChanged(object sender, EventArgs e)
         {
             lblWhereToEat.Text = "Take Out";
         }
-
-        private void ckBox1_CheckedChanged(object sender, EventArgs e)
+        private void chkOnion_CheckedChanged(object sender, EventArgs e)
         {
-            if(chkOnion.Checked)
-            { 
-                lblToppings.Text = "Onion"; 
+            if (chkOnion.Checked)
+            {
+                lblToppings.Text = "Onion";
             }
             else
             {
                 lblToppings.Text = "No Toppings";
             }
         }
-
-        private void ckBox2_CheckedChanged(object sender, EventArgs e)
-        {            
+        private void chkOlives_CheckedChanged(object sender, EventArgs e)
+        {
             if (chkOnion.Checked)
             {
                 lblToppings.Text = "Onion";
@@ -101,16 +108,15 @@ namespace Pizza_Ordering
             {
                 lblToppings.Text = "Olives";
             }
-                
+
             else
             {
                 lblToppings.Text = "No Toppings";
             }
         }
-
-        private void ckBox3_CheckedChanged(object sender, EventArgs e)
-        {            
-            if(chkOnion.Checked && chkOlives.Checked && chkTomatoes.Checked)
+        private void chkTomatoes_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkOnion.Checked && chkOlives.Checked && chkTomatoes.Checked)
             {
                 lblToppings.Text = "Onion, Olives, Tomatoes";
             }
@@ -123,9 +129,8 @@ namespace Pizza_Ordering
                 lblToppings.Text = "No Toppings";
             }
         }
-
-        private void ckBox4_CheckedChanged(object sender, EventArgs e)
-        {            
+        private void chkMushrooms_CheckedChanged(object sender, EventArgs e)
+        {
             if (chkOnion.Checked && chkOlives.Checked && chkTomatoes.Checked && chkMushrooms.Checked)
             {
                 lblToppings.Text = "Onion, Olives, Tomatoes, Mushrooms";
@@ -139,9 +144,8 @@ namespace Pizza_Ordering
                 lblToppings.Text = "No Toppings";
             }
         }
-
-        private void ckBox5_CheckedChanged(object sender, EventArgs e)
-        {           
+        private void chkExtraChees_CheckedChanged(object sender, EventArgs e)
+        {
             if (chkOnion.Checked && chkOlives.Checked && chkTomatoes.Checked && chkMushrooms.Checked && chkExtraChees.Checked)
             {
                 lblToppings.Text = "Onion, Olives, Tomatoes, Mushrooms, Extra Chees";
@@ -163,12 +167,11 @@ namespace Pizza_Ordering
                 lblToppings.Text = "No Toppings";
             }
         }
-
-        private void ckBox6_CheckedChanged(object sender, EventArgs e)
+        private void chkGreenPeppers_CheckedChanged(object sender, EventArgs e)
         {
             if (chkOnion.Checked && chkOlives.Checked && chkTomatoes.Checked && chkMushrooms.Checked && chkExtraChees.Checked && chkGreenPeppers.Checked)
-            {                
-                lblToppings.Text = "Onion, Olives, Tomatoes, Mushrooms, Extra Chees, Green Peppers";                
+            {
+                lblToppings.Text = "Onion, Olives, Tomatoes, Mushrooms, Extra Chees, Green Peppers";
             }
             else if (chkOnion.Checked && chkOlives.Checked && chkTomatoes.Checked && chkMushrooms.Checked && chkExtraChees.Checked)
             {
@@ -182,6 +185,26 @@ namespace Pizza_Ordering
             {
                 lblToppings.Text = "No Toppings";
             }
+        }
+        private void lblSize_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void lblToppings_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void lblCrustType_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void lblWhereToEat_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void lblTotalPrice_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
