@@ -42,147 +42,146 @@ namespace Pizza_Ordering
 
         private void rdBtn1_CheckedChanged(object sender, EventArgs e)
         {
-            label6.Text = "Small";
+            lblSize.Text = "Small";
         }
 
         private void rdBtn2_CheckedChanged(object sender, EventArgs e)
         {
-            label6.Text = "Medium";
+            lblSize.Text = "Medium";
         }
 
         private void rdBtn3_CheckedChanged(object sender, EventArgs e)
         {
-            label6.Text = "Large";
+            lblSize.Text = "Large";
         }
 
         private void rdBtn4_CheckedChanged(object sender, EventArgs e)
         {
-            label8.Text = "Thin Crust";
+            lblCrustType.Text = "Thin Crust";
         }
 
         private void rdBtn5_CheckedChanged(object sender, EventArgs e)
         {
-            label8.Text = "Think Crust";
+            lblCrustType.Text = "Think Crust";
         }
 
         private void rdBtn6_CheckedChanged(object sender, EventArgs e)
         {
-            label9.Text = "Eat In";
+            lblWhereToEat.Text = "Eat In";
         }
 
         private void rdBtn7_CheckedChanged(object sender, EventArgs e)
         {
-            label9.Text = "Take Out";
+            lblWhereToEat.Text = "Take Out";
         }
 
         private void ckBox1_CheckedChanged(object sender, EventArgs e)
         {
-            if(ckBox1.Checked)
+            if(chkOnion.Checked)
             { 
-                label7.Text = "Onion"; 
+                lblToppings.Text = "Onion"; 
             }
             else
             {
-                label7.Text = "No Toppings";
+                lblToppings.Text = "No Toppings";
             }
         }
 
         private void ckBox2_CheckedChanged(object sender, EventArgs e)
         {            
-            if (ckBox1.Checked)
+            if (chkOnion.Checked)
             {
-                label7.Text = "Onion";
+                lblToppings.Text = "Onion";
             }
-            if (ckBox1.Checked && ckBox2.Checked)
+            if (chkOnion.Checked && chkOlives.Checked)
             {
-                label7.Text = "Onion, Olives";
+                lblToppings.Text = "Onion, Olives";
             }
-            else if (ckBox2.Checked)
+            else if (chkOlives.Checked)
             {
-                label7.Text = "Olives";
+                lblToppings.Text = "Olives";
             }
                 
             else
             {
-                label7.Text = "No Toppings";
+                lblToppings.Text = "No Toppings";
             }
         }
 
         private void ckBox3_CheckedChanged(object sender, EventArgs e)
         {            
-            if(ckBox1.Checked && ckBox2.Checked && ckBox3.Checked)
+            if(chkOnion.Checked && chkOlives.Checked && chkTomatoes.Checked)
             {
-                label7.Text = "Onion, Olives, Tomatoes";
+                lblToppings.Text = "Onion, Olives, Tomatoes";
             }
-            else if (ckBox3.Checked)
+            else if (chkTomatoes.Checked)
             {
-                label7.Text = "Tomatoes";
+                lblToppings.Text = "Tomatoes";
             }
             else
             {
-                label7.Text = "No Toppings";
+                lblToppings.Text = "No Toppings";
             }
         }
 
         private void ckBox4_CheckedChanged(object sender, EventArgs e)
         {            
-            if (ckBox1.Checked && ckBox2.Checked && ckBox3.Checked && ckBox4.Checked)
+            if (chkOnion.Checked && chkOlives.Checked && chkTomatoes.Checked && chkMushrooms.Checked)
             {
-                label7.Text = "Onion, Olives, Tomatoes, Mushrooms";
+                lblToppings.Text = "Onion, Olives, Tomatoes, Mushrooms";
             }
-            else if (ckBox4.Checked)
+            else if (chkMushrooms.Checked)
             {
-                label7.Text = "Mushrooms";
+                lblToppings.Text = "Mushrooms";
             }
             else
             {
-                label7.Text = "No Toppings";
+                lblToppings.Text = "No Toppings";
             }
         }
 
         private void ckBox5_CheckedChanged(object sender, EventArgs e)
         {           
-            if (ckBox1.Checked && ckBox2.Checked && ckBox3.Checked && ckBox4.Checked && ckBox5.Checked)
+            if (chkOnion.Checked && chkOlives.Checked && chkTomatoes.Checked && chkMushrooms.Checked && chkExtraChees.Checked)
             {
-                label7.Text = "Onion, Olives, Tomatoes, Mushrooms, Extra Chees";
+                lblToppings.Text = "Onion, Olives, Tomatoes, Mushrooms, Extra Chees";
             }
-            if (ckBox1.Checked && ckBox2.Checked && ckBox3.Checked && ckBox4.Checked && ckBox5.Checked)
+            if (chkOnion.Checked && chkOlives.Checked && chkTomatoes.Checked && chkMushrooms.Checked && chkExtraChees.Checked)
             {
-                label7.Text = "Onion, Olives, Tomatoes, Mushrooms, Extra Chees, Green Peppers";
+                lblToppings.Text = "Onion, Olives, Tomatoes, Mushrooms, Extra Chees, Green Peppers";
             }
-            else if (ckBox1.Checked && ckBox2.Checked && ckBox3.Checked && ckBox4.Checked && ckBox6.Checked)
+            else if (chkOnion.Checked && chkOlives.Checked && chkTomatoes.Checked && chkMushrooms.Checked && chkGreenPeppers.Checked)
             {
-                label7.Text = "Onion, Olives, Tomatoes, Mushrooms, Green Peppers";
+                lblToppings.Text = "Onion, Olives, Tomatoes, Mushrooms, Green Peppers";
             }
-            else if (ckBox5.Checked)
+            else if (chkExtraChees.Checked)
             {
-                label7.Text = "Extra Chees";
+                lblToppings.Text = "Extra Chees";
             }
             else
             {
-                label7.Text = "No Toppings";
+                lblToppings.Text = "No Toppings";
             }
         }
 
         private void ckBox6_CheckedChanged(object sender, EventArgs e)
         {
-            if (ckBox1.Checked && ckBox2.Checked && ckBox3.Checked && ckBox4.Checked && ckBox5.Checked && ckBox6.Checked)
+            if (chkOnion.Checked && chkOlives.Checked && chkTomatoes.Checked && chkMushrooms.Checked && chkExtraChees.Checked && chkGreenPeppers.Checked)
             {                
-                label7.Text = "Onion, Olives, Tomatoes, Mushrooms, Extra Chees, Green Peppers";                
+                lblToppings.Text = "Onion, Olives, Tomatoes, Mushrooms, Extra Chees, Green Peppers";                
             }
-            else if (ckBox1.Checked && ckBox2.Checked && ckBox3.Checked && ckBox4.Checked && ckBox5.Checked)
+            else if (chkOnion.Checked && chkOlives.Checked && chkTomatoes.Checked && chkMushrooms.Checked && chkExtraChees.Checked)
             {
-                label7.Text = "Onion, Olives, Tomatoes, Mushrooms, Extra Chees";
+                lblToppings.Text = "Onion, Olives, Tomatoes, Mushrooms, Extra Chees";
             }
-            else if (ckBox6.Checked)
+            else if (chkGreenPeppers.Checked)
             {
-                label7.Text = "Green Peppers";
+                lblToppings.Text = "Green Peppers";
             }
             else
             {
-                label7.Text = "No Toppings";
+                lblToppings.Text = "No Toppings";
             }
         }
-
     }
 }
