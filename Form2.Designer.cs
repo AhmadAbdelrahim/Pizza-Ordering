@@ -47,35 +47,38 @@
             this.rbTakeOut = new System.Windows.Forms.RadioButton();
             this.rbEatIn = new System.Windows.Forms.RadioButton();
             this.gpBox5 = new System.Windows.Forms.GroupBox();
-            this.lblTotalPrice = new System.Windows.Forms.Label();
             this.lblWhereToEat = new System.Windows.Forms.Label();
             this.lblCrustType = new System.Windows.Forms.Label();
             this.lblToppings = new System.Windows.Forms.Label();
             this.lblSize = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.lblTotalPrice = new System.Windows.Forms.Label();
             this.btnOrderPizza = new System.Windows.Forms.Button();
             this.btnResetForm = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.gbSize.SuspendLayout();
             this.gbCrustType.SuspendLayout();
             this.gbToppings.SuspendLayout();
             this.gbWhereToEat.SuspendLayout();
             this.gpBox5.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbSize
             // 
+            this.gbSize.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.gbSize.BackColor = System.Drawing.Color.Transparent;
             this.gbSize.Controls.Add(this.rbLarge);
             this.gbSize.Controls.Add(this.rbMedium);
             this.gbSize.Controls.Add(this.rbSmall);
             this.gbSize.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.gbSize.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbSize.Location = new System.Drawing.Point(10, 91);
+            this.gbSize.Location = new System.Drawing.Point(134, 8);
             this.gbSize.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gbSize.Name = "gbSize";
             this.gbSize.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -135,7 +138,7 @@
             this.gbCrustType.Controls.Add(this.rbThinkCrust);
             this.gbCrustType.Controls.Add(this.rbThinCrust);
             this.gbCrustType.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbCrustType.Location = new System.Drawing.Point(10, 218);
+            this.gbCrustType.Location = new System.Drawing.Point(134, 135);
             this.gbCrustType.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gbCrustType.Name = "gbCrustType";
             this.gbCrustType.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -176,6 +179,7 @@
             // 
             // gbToppings
             // 
+            this.gbToppings.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.gbToppings.BackColor = System.Drawing.Color.Transparent;
             this.gbToppings.Controls.Add(this.chkGreenPeppers);
             this.gbToppings.Controls.Add(this.chkExtraChees);
@@ -184,11 +188,11 @@
             this.gbToppings.Controls.Add(this.chkOlives);
             this.gbToppings.Controls.Add(this.chkOnion);
             this.gbToppings.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbToppings.Location = new System.Drawing.Point(181, 91);
+            this.gbToppings.Location = new System.Drawing.Point(310, 8);
             this.gbToppings.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gbToppings.Name = "gbToppings";
             this.gbToppings.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.gbToppings.Size = new System.Drawing.Size(156, 225);
+            this.gbToppings.Size = new System.Drawing.Size(150, 225);
             this.gbToppings.TabIndex = 3;
             this.gbToppings.TabStop = false;
             this.gbToppings.Text = "Toppings";
@@ -266,6 +270,7 @@
             // chkOnion
             // 
             this.chkOnion.AutoSize = true;
+            this.chkOnion.BackColor = System.Drawing.Color.Transparent;
             this.chkOnion.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkOnion.Location = new System.Drawing.Point(20, 20);
             this.chkOnion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -274,7 +279,7 @@
             this.chkOnion.TabIndex = 0;
             this.chkOnion.Tag = "5";
             this.chkOnion.Text = "Onion";
-            this.chkOnion.UseVisualStyleBackColor = true;
+            this.chkOnion.UseVisualStyleBackColor = false;
             this.chkOnion.CheckedChanged += new System.EventHandler(this.chkOnion_CheckedChanged);
             // 
             // gbWhereToEat
@@ -283,7 +288,7 @@
             this.gbWhereToEat.Controls.Add(this.rbTakeOut);
             this.gbWhereToEat.Controls.Add(this.rbEatIn);
             this.gbWhereToEat.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbWhereToEat.Location = new System.Drawing.Point(10, 332);
+            this.gbWhereToEat.Location = new System.Drawing.Point(134, 249);
             this.gbWhereToEat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gbWhereToEat.Name = "gbWhereToEat";
             this.gbWhereToEat.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -322,63 +327,57 @@
             // 
             // gpBox5
             // 
+            this.gpBox5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.gpBox5.BackColor = System.Drawing.Color.Transparent;
-            this.gpBox5.Controls.Add(this.lblTotalPrice);
             this.gpBox5.Controls.Add(this.lblWhereToEat);
             this.gpBox5.Controls.Add(this.lblCrustType);
             this.gpBox5.Controls.Add(this.lblToppings);
             this.gpBox5.Controls.Add(this.lblSize);
-            this.gpBox5.Controls.Add(this.label5);
             this.gpBox5.Controls.Add(this.label4);
             this.gpBox5.Controls.Add(this.label3);
             this.gpBox5.Controls.Add(this.label2);
             this.gpBox5.Controls.Add(this.label1);
             this.gpBox5.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gpBox5.Location = new System.Drawing.Point(413, 91);
+            this.gpBox5.ForeColor = System.Drawing.Color.Yellow;
+            this.gpBox5.Location = new System.Drawing.Point(482, 8);
             this.gpBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gpBox5.Name = "gpBox5";
             this.gpBox5.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.gpBox5.Size = new System.Drawing.Size(365, 299);
+            this.gpBox5.Size = new System.Drawing.Size(195, 299);
             this.gpBox5.TabIndex = 5;
             this.gpBox5.TabStop = false;
             this.gpBox5.Text = "Order Summary";
             // 
-            // lblTotalPrice
-            // 
-            this.lblTotalPrice.AutoSize = true;
-            this.lblTotalPrice.Location = new System.Drawing.Point(153, 240);
-            this.lblTotalPrice.Name = "lblTotalPrice";
-            this.lblTotalPrice.Size = new System.Drawing.Size(57, 17);
-            this.lblTotalPrice.TabIndex = 9;
-            this.lblTotalPrice.Text = "label10";
-            // 
             // lblWhereToEat
             // 
             this.lblWhereToEat.AutoSize = true;
-            this.lblWhereToEat.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWhereToEat.Location = new System.Drawing.Point(153, 174);
+            this.lblWhereToEat.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWhereToEat.ForeColor = System.Drawing.Color.White;
+            this.lblWhereToEat.Location = new System.Drawing.Point(9, 263);
             this.lblWhereToEat.Name = "lblWhereToEat";
-            this.lblWhereToEat.Size = new System.Drawing.Size(44, 18);
+            this.lblWhereToEat.Size = new System.Drawing.Size(59, 19);
             this.lblWhereToEat.TabIndex = 8;
             this.lblWhereToEat.Text = "label9";
             // 
             // lblCrustType
             // 
             this.lblCrustType.AutoSize = true;
-            this.lblCrustType.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCrustType.Location = new System.Drawing.Point(153, 148);
+            this.lblCrustType.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCrustType.ForeColor = System.Drawing.Color.White;
+            this.lblCrustType.Location = new System.Drawing.Point(9, 219);
             this.lblCrustType.Name = "lblCrustType";
-            this.lblCrustType.Size = new System.Drawing.Size(44, 18);
+            this.lblCrustType.Size = new System.Drawing.Size(59, 19);
             this.lblCrustType.TabIndex = 7;
             this.lblCrustType.Text = "label8";
             // 
             // lblToppings
             // 
-            this.lblToppings.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblToppings.Location = new System.Drawing.Point(153, 62);
+            this.lblToppings.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblToppings.ForeColor = System.Drawing.Color.White;
+            this.lblToppings.Location = new System.Drawing.Point(9, 79);
             this.lblToppings.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.lblToppings.Name = "lblToppings";
-            this.lblToppings.Size = new System.Drawing.Size(200, 75);
+            this.lblToppings.Size = new System.Drawing.Size(166, 123);
             this.lblToppings.TabIndex = 6;
             this.lblToppings.Tag = "";
             this.lblToppings.Text = "label7";
@@ -386,57 +385,61 @@
             // lblSize
             // 
             this.lblSize.AutoSize = true;
-            this.lblSize.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSize.Location = new System.Drawing.Point(153, 32);
+            this.lblSize.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSize.ForeColor = System.Drawing.Color.White;
+            this.lblSize.Location = new System.Drawing.Point(9, 38);
             this.lblSize.Name = "lblSize";
-            this.lblSize.Size = new System.Drawing.Size(44, 18);
+            this.lblSize.Size = new System.Drawing.Size(59, 19);
             this.lblSize.TabIndex = 5;
             this.lblSize.Text = "label6";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(25, 240);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(80, 17);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Total Price";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(25, 174);
+            this.label4.Location = new System.Drawing.Point(9, 246);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(102, 17);
+            this.label4.Size = new System.Drawing.Size(107, 17);
             this.label4.TabIndex = 3;
-            this.label4.Text = "Where To Eat";
+            this.label4.Text = "Where To Eat:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(25, 152);
+            this.label3.Location = new System.Drawing.Point(9, 202);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(84, 17);
+            this.label3.Size = new System.Drawing.Size(89, 17);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Crust Type";
+            this.label3.Text = "Crust Type:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(25, 62);
+            this.label2.Location = new System.Drawing.Point(9, 58);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(72, 17);
+            this.label2.Size = new System.Drawing.Size(77, 17);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Toppings";
+            this.label2.Text = "Toppings:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(25, 32);
+            this.label1.Location = new System.Drawing.Point(9, 21);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 17);
+            this.label1.Size = new System.Drawing.Size(40, 17);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Size";
+            this.label1.Text = "Size:";
+            // 
+            // lblTotalPrice
+            // 
+            this.lblTotalPrice.AutoSize = true;
+            this.lblTotalPrice.BackColor = System.Drawing.Color.Transparent;
+            this.lblTotalPrice.Font = new System.Drawing.Font("Arial Rounded MT Bold", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalPrice.ForeColor = System.Drawing.Color.White;
+            this.lblTotalPrice.Location = new System.Drawing.Point(6, 16);
+            this.lblTotalPrice.Name = "lblTotalPrice";
+            this.lblTotalPrice.Size = new System.Drawing.Size(163, 46);
+            this.lblTotalPrice.TabIndex = 9;
+            this.lblTotalPrice.Text = "label10";
             // 
             // btnOrderPizza
             // 
@@ -444,12 +447,12 @@
             this.btnOrderPizza.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnOrderPizza.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnOrderPizza.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOrderPizza.Location = new System.Drawing.Point(174, 18);
+            this.btnOrderPizza.Location = new System.Drawing.Point(134, 395);
             this.btnOrderPizza.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnOrderPizza.Name = "btnOrderPizza";
             this.btnOrderPizza.Size = new System.Drawing.Size(163, 41);
             this.btnOrderPizza.TabIndex = 0;
-            this.btnOrderPizza.Text = "Order Pizza";
+            this.btnOrderPizza.Text = "Order Now";
             this.btnOrderPizza.UseVisualStyleBackColor = true;
             this.btnOrderPizza.Click += new System.EventHandler(this.btnOrderPizza_Click);
             // 
@@ -459,12 +462,12 @@
             this.btnResetForm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnResetForm.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnResetForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnResetForm.Location = new System.Drawing.Point(413, 18);
+            this.btnResetForm.Location = new System.Drawing.Point(324, 395);
             this.btnResetForm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnResetForm.Name = "btnResetForm";
             this.btnResetForm.Size = new System.Drawing.Size(163, 41);
             this.btnResetForm.TabIndex = 1;
-            this.btnResetForm.Text = "Reset Form";
+            this.btnResetForm.Text = "Reset";
             this.btnResetForm.UseVisualStyleBackColor = true;
             this.btnResetForm.Click += new System.EventHandler(this.btnResetForm_Click);
             // 
@@ -472,13 +475,44 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1.ForeColor = System.Drawing.Color.Transparent;
-            this.panel1.Location = new System.Drawing.Point(649, 1);
+            this.panel1.Location = new System.Drawing.Point(3, 11);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(141, 106);
+            this.panel1.Size = new System.Drawing.Size(100, 100);
             this.panel1.TabIndex = 6;
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(514, 395);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(163, 41);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "Close";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.lblTotalPrice);
+            this.groupBox1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.ForeColor = System.Drawing.Color.Yellow;
+            this.groupBox1.Location = new System.Drawing.Point(482, 311);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Size = new System.Drawing.Size(195, 69);
+            this.groupBox1.TabIndex = 11;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Total Price:";
             // 
             // Form2
             // 
@@ -487,7 +521,8 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnOrderPizza);
             this.Controls.Add(this.btnResetForm);
             this.Controls.Add(this.gpBox5);
@@ -495,9 +530,13 @@
             this.Controls.Add(this.gbToppings);
             this.Controls.Add(this.gbCrustType);
             this.Controls.Add(this.gbSize);
+            this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form2";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Order";
             this.Load += new System.EventHandler(this.Form2_Load);
             this.gbSize.ResumeLayout(false);
@@ -510,6 +549,8 @@
             this.gbWhereToEat.PerformLayout();
             this.gpBox5.ResumeLayout(false);
             this.gpBox5.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -534,7 +575,6 @@
         private System.Windows.Forms.RadioButton rbTakeOut;
         private System.Windows.Forms.RadioButton rbEatIn;
         private System.Windows.Forms.GroupBox gpBox5;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
@@ -547,5 +587,7 @@
         private System.Windows.Forms.Label lblCrustType;
         private System.Windows.Forms.Label lblToppings;
         private System.Windows.Forms.Label lblSize;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

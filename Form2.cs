@@ -228,27 +228,27 @@ namespace Pizza_Ordering
 
             if (chkOnion.Checked)
             {
-                sToppings += "Onion";
+                sToppings += "Onion\n";
             }
             if (chkOlives.Checked)
             {
-                sToppings += ", Olives";
+                sToppings += "Olives\n";
             }
             if (chkTomatoes.Checked)
             {
-                sToppings += ", Tomatoes";
+                sToppings += "Tomatoes\n";
             }
             if (chkMushrooms.Checked)
             {
-                sToppings += ", Mushrooms";
+                sToppings += "Mushrooms\n";
             }
             if (chkExtraChees.Checked)
             {
-                sToppings += ", ExtraChees";
+                sToppings += "ExtraChees\n";
             }
             if (chkGreenPeppers.Checked)
             {
-                sToppings += ", GreenPeppers";
+                sToppings += "GreenPeppers\n";
             }
             if (sToppings.StartsWith(","))
             {
@@ -287,6 +287,11 @@ namespace Pizza_Ordering
         private void btnResetForm_Click(object sender, EventArgs e)
         {
             ResetForm();
-        }     
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
