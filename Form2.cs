@@ -141,6 +141,7 @@ namespace Pizza_Ordering
             lblTotalPrice.Text = "$" + CalculateTotalPrice().ToString();
         }
 
+
         void UpdateSize()
         {
             UpdateTotalPrice();
@@ -292,6 +293,13 @@ namespace Pizza_Ordering
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnTotalPrice_Click(object sender, EventArgs e)
+        {
+            float TotalPrice1 = (float)numericUpDown1.Value * (float)CalculateTotalPrice();
+
+            label6.Text = ($"${TotalPrice1.ToString()}");
         }
     }
 }
